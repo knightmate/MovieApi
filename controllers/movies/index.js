@@ -7,7 +7,7 @@ const app=express();
 const api=require('../../controllers/movies/create/create');
 
 
-router.get('/movies/create',api.create);
+router.post('/movies/create',api.create);
 
  
  

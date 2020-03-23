@@ -4,13 +4,27 @@ const mongoose = require('mongoose');
  //desgining the scahema for the movie
 const movieApi= new mongoose.Schema(
     {
-        name:{
+        movie_name:{
             type: String,
             required: true,
         },
-        quantity:{
+        movie_trailer:{
+            type: String,
+            
+        },
+        movie_overview:{
+            type: String,
+            
+        },
+        movie_poster:{
+            type: String,
+            required: true,
+        },
+
+        movie_length:{
+
             type:String,
-            required:true,
+            required:true
         }
 
     },{
