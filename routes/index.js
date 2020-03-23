@@ -8,7 +8,7 @@ const controller =require('../controllers/index');
 
 console.log("I'm  in router , index.js file");
 
-router.get('/',controller);
+router.use('/',controller);
     
  
  

@@ -6,10 +6,11 @@ var router = express.Router();
 const app=express();
 const api=require('../../controllers/movies/create/create');
 
-app.use('/create',api.create);
+
+router.get('/movies/create',api.create);
 
  
-
+ 
 
 module.exports=router;
 

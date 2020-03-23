@@ -17,6 +17,9 @@ const  movieindex  =require('./movies/index');
     
  });
 
+ console.log("In the Router of the program");
+ router.get('/movies/create',require('./movies/index'));
+
  
 
 module.exports=router;
