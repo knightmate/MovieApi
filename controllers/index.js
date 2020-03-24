@@ -19,6 +19,7 @@ const  movieindex  =require('./movies/index');
 
  console.log("In the Router of the program");
  router.post('/movies/create',require('./movies/index'));
+ router.post('/theatre/create', require('./theter/index'));
 
  
 
