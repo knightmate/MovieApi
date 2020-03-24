@@ -1,5 +1,5 @@
 //create the movie using create function 
-const db=require('../../../model/index');
+const db=require('../../../model/movies');
 
 
 //create module, create the new file and return the data , film name should be unique
@@ -7,7 +7,9 @@ module.exports.create= (req,res)=>{
 
 
     console.log(req.body);
-     db.create({
+     
+    
+    db.create({
        
         movie_name:req.body.movie_name,
         movie_trailer:req.body.movie_trailer,
@@ -21,17 +23,26 @@ module.exports.create= (req,res)=>{
         {
             console.log("error while creating the data base"+error);
         
-            return;
-        }
+          return res.send("ERROR"+error);
+        
+
+        }  
 
         console.log(user)
+        console.log("movie is created");
+        
+        return res.json(200,{
 
+          data:{
+            user:user
+          }
+        })
 
      })
 
-    console.log("movie is created");
+     
 
-    res.end("movies are created");
+     
 
 
  }

@@ -7,6 +7,9 @@ const movieApi= new mongoose.Schema(
         movie_name:{
             type: String,
             required: true,
+            unique:true,
+            
+
         },
         movie_trailer:{
             type: String,
